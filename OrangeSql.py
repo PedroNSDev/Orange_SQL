@@ -98,7 +98,7 @@ class BancoDadosSQLite:
         self.conexao = None
         self.cursor = None
         self.inicializar_banco()
-    
+     
     def inicializar_banco(self):
         """Cria a conexão e define as tabelas"""
         self.conexao = sqlite3.connect(self.nome_banco)
@@ -382,12 +382,11 @@ class TelaLogin:
         self.banco_dados = BancoDadosSQLite()
         self.usuario_logado = None
         
-        # Centralizar a janela
+
         self.root.eval('tk::PlaceWindow . center')
         
         self.setup_interface()
-    
-    def setup_interface(self):
+    face(self):
         """Configura a interface de login"""
         # Frame principal
         main_frame = ttk.Frame(self.root, padding="20")
@@ -1281,3 +1280,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
